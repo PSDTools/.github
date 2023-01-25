@@ -1,6 +1,6 @@
 # Hi there 👋
 
-We make tools **For** Pattonville School District!
+We make tools **for** the Pattonville School District!
 
 <!--
 

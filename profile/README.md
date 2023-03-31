@@ -13,7 +13,7 @@ We make tools **for** the Pattonville School District!
 ## 🙋‍♀️ A short introduction - what are we all about?
 
 We were founded in 2022, and began working full-steam-ahead in 2023.
-We comprise of 3 students, and are _very_ enthusiastic.
+We comprise of 3 students at the moment, and are _very_ enthusiastic.
 
 ## 🌈 Contribution guidelines - how can you get involved?
 

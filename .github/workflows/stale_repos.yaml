@@ -20,7 +20,7 @@ jobs:
 
     steps:
     - uses: docker://ghcr.io/github/stale_repos:v1.4.0
-      with:
+      env:
         gh-token: ${{ secrets.GITHUB_TOKEN }}
         organization: "PSDTools"
         INACTIVE_DAYS: 100

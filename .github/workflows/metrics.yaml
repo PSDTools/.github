@@ -3,7 +3,7 @@ name: Activity
 
 on:
   schedule:
-    - cron: "0 14 * * 1"
+    - cron: "0 14 * * *"
   workflow_dispatch:
   push:
     branches: [main]
@@ -13,7 +13,7 @@ permissions:
   contents: write
 
 jobs:
-  metrics-activity:
+  app-activity:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     if: github.repository == PSDTools/${{ github.ACTION_REPOSITORY }}
@@ -21,22 +21,30 @@ jobs:
       group: ${{ github.workflow }}-${{ github.ref }}
       cancel-in-progress: true
     env:
-      projects_svg: metrics/projects/projects.svg
-      org-people_svg: metrics/people/org-people.svg
       app-repository-people_svg: metrics/people/app-repository.svg
+      app_followup_svg: metrics/followup/app_followup.svg
     steps:
-      - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
-      - uses: lowlighter/metrics@dd64c50bf38be91795e73980f3483d028e7e55ee
+      - name: 📚 Git Checkout
+        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
         with:
-          filename: ${{ env.projects_svg }}
+          submodules: recursive
+          clean: true
+          persist-credentials: false
+          set-safe-directory: true
+      - name: 📈 App Metrics
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
+        with:
+          filename: ${{ env.app_followup_svg }}
+          template: repository
           token: ${{ secrets.GH_TOKEN }}
-          base: ""
           user: ${{ github.repository_owner }}
-          plugin_projects: yes
-          plugin_projects_descriptions: yes
-          plugin_projects_limit: 10
+          base: header, activity,community,repositories
+          repo: app
+          plugin_followup: yes
+          plugin_followup_indepth: yes
           plugins_errors_fatal: yes
-      - uses: lowlighter/metrics@dd64c50bf38be91795e73980f3483d028e7e55ee
+      - name: 📈 App People Metrics
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
         with:
           filename: ${{ env.app-repository-people_svg }}
           token: ${{ secrets.GH_TOKEN }}
@@ -60,10 +68,29 @@ jobs:
       metrics_svg: metrics/metrics.svg
       repositories_metrics_svg: metrics/repositories_metrics.svg
       followup_svg: metrics/followup/followup.svg
-      app_followup_svg: metrics/followup/app_followup.svg
+      org-people_svg: metrics/people/org-people.svg
+      projects_svg: metrics/projects/projects.svg
     steps:
-      - uses: actions/checkout@ac593985615ec2ede58e132d2e21d2b1cbd6127c
-      - uses: lowlighter/metrics@dd64c50bf38be91795e73980f3483d028e7e55ee
+      - name: 📚 Git Checkout
+        uses: actions/checkout@3df4ab11eba7bda6032a0b82a6bb43b11571feac # v4.0.0
+        with:
+          submodules: recursive
+          clean: true
+          persist-credentials: false
+          set-safe-directory: true
+      - name: 📈 Projects Metrics
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
+        with:
+          filename: ${{ env.projects_svg }}
+          token: ${{ secrets.GH_TOKEN }}
+          base: ""
+          user: ${{ github.repository_owner }}
+          plugin_projects: yes
+          plugin_projects_descriptions: yes
+          plugin_projects_limit: 10
+          plugins_errors_fatal: yes
+      - name: 📈 Org Metrics
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
         with:
           filename: ${{ env.metrics_svg }}
           token: ${{ secrets.GH_TOKEN }}
@@ -72,30 +99,21 @@ jobs:
           plugin_introduction: yes
           plugin_traffic: yes
           plugins_errors_fatal: yes
-      - uses: lowlighter/metrics@dd64c50bf38be91795e73980f3483d028e7e55ee
+      - name: 📈 Repos Metrics
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
         with:
           filename: ${{ env.repositories_metrics_svg }}
           token: ${{ secrets.GH_TOKEN }}
           user: ${{ github.repository_owner }}
           base: repositories
           plugins_errors_fatal: yes
-      - uses: lowlighter/metrics@dd64c50bf38be91795e73980f3483d028e7e55ee
+      - name: 📈 PRs/Issues Metrics
+        uses: lowlighter/metrics@65836723097537a54cd8eb90f61839426b4266b6 # v3.34
         with:
           filename: ${{ env.followup_svg }}
           token: ${{ secrets.GH_TOKEN }}
           base: ""
           user: ${{ github.repository_owner }}
-          plugin_followup: yes
-          plugin_followup_indepth: yes
-          plugins_errors_fatal: yes
-      - uses: lowlighter/metrics@dd64c50bf38be91795e73980f3483d028e7e55ee
-        with:
-          filename: ${{ env.app_followup_svg }}
-          template: repository
-          token: ${{ secrets.GH_TOKEN }}
-          user: ${{ github.repository_owner }}
-          base: header, activity,community,repositories
-          repo: app
           plugin_followup: yes
           plugin_followup_indepth: yes
           plugins_errors_fatal: yes

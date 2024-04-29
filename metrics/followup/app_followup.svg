@@ -40,18 +40,18 @@
                                 <g>
                                     <rect class="day" x="0" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-bg)" rx="2" ry="2"/>
                                     <rect class="day" x="15" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-bg)" rx="2" ry="2"/>
-                                    <rect class="day" x="30" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-L2-bg)" rx="2" ry="2"/>
-                                    <rect class="day" x="45" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-L4-bg)" rx="2" ry="2"/>
-                                    <rect class="day" x="60" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-bg)" rx="2" ry="2"/>
-                                    <rect class="day" x="75" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-L2-bg)" rx="2" ry="2"/>
-                                    <rect class="day" x="90" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-L4-bg)" rx="2" ry="2"/>
-                                    <rect class="day" x="105" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-bg)" rx="2" ry="2"/>
-                                    <rect class="day" x="120" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-L2-bg)" rx="2" ry="2"/>
-                                    <rect class="day" x="135" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-bg)" rx="2" ry="2"/>
+                                    <rect class="day" x="30" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-bg)" rx="2" ry="2"/>
+                                    <rect class="day" x="45" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-L2-bg)" rx="2" ry="2"/>
+                                    <rect class="day" x="60" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-L4-bg)" rx="2" ry="2"/>
+                                    <rect class="day" x="75" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-bg)" rx="2" ry="2"/>
+                                    <rect class="day" x="90" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-L2-bg)" rx="2" ry="2"/>
+                                    <rect class="day" x="105" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-L4-bg)" rx="2" ry="2"/>
+                                    <rect class="day" x="120" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-bg)" rx="2" ry="2"/>
+                                    <rect class="day" x="135" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-L2-bg)" rx="2" ry="2"/>
                                     <rect class="day" x="150" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-bg)" rx="2" ry="2"/>
                                     <rect class="day" x="165" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-bg)" rx="2" ry="2"/>
                                     <rect class="day" x="180" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-bg)" rx="2" ry="2"/>
-                                    <rect class="day" x="195" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-L2-bg)" rx="2" ry="2"/>
+                                    <rect class="day" x="195" y="0" width="11" height="11" fill="var(--color-calendar-graph-day-bg)" rx="2" ry="2"/>
                                 </g>
                             </svg>
                         </div>
@@ -166,14 +166,14 @@
                                 <rect x="0" y="0" width="220" height="8" fill="white" rx="5"/>
                             </mask>
                             <rect mask="url(#pr-bar)" x="0" y="0" width="0" height="8" fill="#d1d5da"/>
-                            <rect mask="url(#issues-bar)" x="0" y="0" width="2.6506024096385543" height="8" fill="#238636"/>
-                            <rect mask="url(#issues-bar)" x="2.6506024096385543" y="0" width="6.184738955823293" height="8" fill="#56d364"/>
-                            <rect mask="url(#issues-bar)" x="8.835341365461847" y="0" width="0" height="8" fill="#8B949E"/>
-                            <rect mask="url(#issues-bar)" x="8.835341365461847" y="0" width="0" height="8" fill="#c9d1d9"/>
-                            <rect mask="url(#issues-bar)" x="8.835341365461847" y="0" width="2.6506024096385543" height="8" fill="#da3633"/>
-                            <rect mask="url(#issues-bar)" x="11.485943775100402" y="0" width="53.895582329317264" height="8" fill="#ff7b72"/>
-                            <rect mask="url(#issues-bar)" x="65.38152610441767" y="0" width="22.9718875502008" height="8" fill="#8957e5"/>
-                            <rect mask="url(#issues-bar)" x="88.35341365461848" y="0" width="131.64658634538154" height="8" fill="#d2a8ff"/>
+                            <rect mask="url(#issues-bar)" x="0" y="0" width="2.64" height="8" fill="#238636"/>
+                            <rect mask="url(#issues-bar)" x="2.64" y="0" width="6.16" height="8" fill="#56d364"/>
+                            <rect mask="url(#issues-bar)" x="8.8" y="0" width="0" height="8" fill="#8B949E"/>
+                            <rect mask="url(#issues-bar)" x="8.8" y="0" width="0" height="8" fill="#c9d1d9"/>
+                            <rect mask="url(#issues-bar)" x="8.8" y="0" width="2.64" height="8" fill="#da3633"/>
+                            <rect mask="url(#issues-bar)" x="11.440000000000001" y="0" width="54.56" height="8" fill="#ff7b72"/>
+                            <rect mask="url(#issues-bar)" x="66" y="0" width="22.88" height="8" fill="#8957e5"/>
+                            <rect mask="url(#issues-bar)" x="88.88" y="0" width="131.12" height="8" fill="#d2a8ff"/>
                         </svg>
                         <div class="field blue fill-width">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
@@ -205,7 +205,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                     <path fill="#da3633" fill-rule="evenodd" d="M10.72 1.227a.75.75 0 011.06 0l.97.97.97-.97a.75.75 0 111.06 1.061l-.97.97.97.97a.75.75 0 01-1.06 1.06l-.97-.97-.97.97a.75.75 0 11-1.06-1.06l.97-.97-.97-.97a.75.75 0 010-1.06zM12.75 6.5a.75.75 0 00-.75.75v3.378a2.251 2.251 0 101.5 0V7.25a.75.75 0 00-.75-.75zm0 5.5a.75.75 0 100 1.5.75.75 0 000-1.5zM2.5 3.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.25 1a2.25 2.25 0 00-.75 4.372v5.256a2.251 2.251 0 101.5 0V5.372A2.25 2.25 0 003.25 1zm0 11a.75.75 0 100 1.5.75.75 0 000-1.5z"/>
                                 </svg>
-                                <span class="no-wrap">64 <small>closed</small></span>
+                                <span class="no-wrap">65 <small>closed</small></span>
                             </div>
                         </div>
                         <div class="field blue fill-width">
@@ -238,7 +238,7 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16">
                                     <path fill="#ff7b72" fill-rule="evenodd" d="M10.72 1.227a.75.75 0 011.06 0l.97.97.97-.97a.75.75 0 111.06 1.061l-.97.97.97.97a.75.75 0 01-1.06 1.06l-.97-.97-.97.97a.75.75 0 11-1.06-1.06l.97-.97-.97-.97a.75.75 0 010-1.06zM12.75 6.5a.75.75 0 00-.75.75v3.378a2.251 2.251 0 101.5 0V7.25a.75.75 0 00-.75-.75zm0 5.5a.75.75 0 100 1.5.75.75 0 000-1.5zM2.5 3.25a.75.75 0 111.5 0 .75.75 0 01-1.5 0zM3.25 1a2.25 2.25 0 00-.75 4.372v5.256a2.251 2.251 0 101.5 0V5.372A2.25 2.25 0 003.25 1zm0 11a.75.75 0 100 1.5.75.75 0 000-1.5z"/>
                                 </svg>
-                                <span class="no-wrap">61 <small>closed</small></span>
+                                <span class="no-wrap">62 <small>closed</small></span>
                             </div>
                         </div>
                     </section>

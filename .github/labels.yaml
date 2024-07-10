@@ -1,0 +1,52 @@
+- name: blocked
+  color: "#444444"
+  description: Relates to something that can not be done immediately
+- name: breaking
+  color: "#b60205"
+  description: Relates to a breaking change
+- name: bug
+  color: "#d73a4a"
+  description: Something is not working
+- name: chore
+  color: "#737c5a"
+  description: Relates to something miscellaneous and/or tedious
+- name: dependencies
+  color: "#0052cc"
+  description: Relates to dependencies
+- name: documentation
+  color: "#0075ca"
+  description: Improvements or additions to documentation
+- name: duplicate
+  color: "#cfd3d7"
+  description: This issue or pull request already exists
+- name: enhancement
+  color: "#a2eeef"
+  description: New feature or request
+- name: external
+  color: "#fef2c0"
+  description: Relates to something external
+- name: good-first-issue
+  color: "#7057ff"
+  description: Good for newcomers
+- name: help-wanted
+  color: "#008672"
+  description: Extra attention is needed
+- name: invalid
+  color: "#e4e669"
+  description: This does not seem right
+- name: question
+  color: "#d876e3"
+  description: Further information is requested
+- name: refactor
+  color: "#0E8A16"
+  description: Relates to an internal change
+- name: regression
+  color: "#633760"
+  description: >-
+    `git bisect` this and hope for atomic commits"
+- name: sync
+  color: "#c5def5"
+  description: Relates to something which needs to get updated
+- name: wontfix
+  color: "#ffffff"
+  description: This will not be worked on

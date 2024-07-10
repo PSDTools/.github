@@ -1,0 +1,30 @@
+---
+name: ♻️ Sync Labels
+
+on:
+  schedule:
+    - cron: "0 14 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/sync-labels.yaml"
+      - ".github/labels.yaml"
+
+permissions: {}
+
+jobs:
+  labels:
+    name: ♻️ Sync labels
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚀 Sync Labels
+        uses: srealmoreno/label-sync-action@87dc7ebe24b159ffb14726b97f11f1e16e89ea92 # v1.0.2
+        with:
+          token: ${{ secrets.GH_TOKEN }}
+          config-file: https://raw.githubusercontent.com/PSDTools/.github/main/.github/labels.yaml
+          clean-labels: false
+          repositories: |
+            PSDTools/app
+            PSDTools/psdtools.github.io

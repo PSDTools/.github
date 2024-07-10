@@ -7,7 +7,8 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: [.github/workflows/metrics.yaml]
+    paths:
+      - ".github/workflows/metrics.yaml"
 
 permissions:
   contents: write

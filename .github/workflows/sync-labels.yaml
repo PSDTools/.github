@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: 🚀 Sync Labels
-        uses: srealmoreno/label-sync-action@87dc7ebe24b159ffb14726b97f11f1e16e89ea92 # v1.0.2
+        uses: srealmoreno/label-sync-action@850ba5cef2b25e56c6c420c4feed0319294682fd # v2.0.0
         with:
           token: ${{ secrets.GH_TOKEN }}
           config-file: https://raw.githubusercontent.com/PSDTools/.github/main/.github/labels.yaml
